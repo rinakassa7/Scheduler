@@ -1,0 +1,55 @@
+MEMBRES DU GROUPE:
+	1-AIT KHEDDACHE Wissam 21910758, 4A
+	2-KASSA Rina 21911373, 4B
+	3-MERIL Emmanuel Miangouila 21810784, 4B
+	4-COYEAU Zakaria 21803285 4B
+
+NUMERO DU GROUPE:
+ 	32
+
+Parcours:
+		L2 INFO
+
+Chargé du TP:
+	M.Guéneron
+
+
+Présentation de l'application:
+	C'est un petite application qui permet de gérer les emplois du temps: on a des activités et des contraintes qui doivent être respectées.(Au lieu de les tester dans un main on a fait les tests unitaires)
+	A chaque fois, on tire un nombre d'emplois du temps aléatoirement, et on affiche celui qui respecte le plus de contraintes parmi ces EDT(notre classe main),
+
+
+Structure de notre projet:
+	1-les classes a compiler (.java) et les deux fichiers de contraintes et d'activités sont dans "projet_java/fil_rouge/application/fil_rouge"
+	2-les testes unitaire a compiler sont dans "projet_java/fil_rouge/application/tests"
+	3-on a crée aussi dans le répertoire projet_java un dossier qu'on a appelé production;
+	4-production est un dossier ou on met les bin c'est à dire, les ".class" qu'on obtient après la compilation des ".java";
+	5-dans production on crée un dossier "classes" qui contient un dossier "test" pour mettre les bin des testes unitaires dedans, et un dossier "java" pour mettre les bin des classes de notre fil_rouge;
+	6-toujours dans production, on crée un dossier jar ou on a mit les jar nécessaires pour lancer notre application (junit, hamcrest, scheduleio);
+	7-et on a crée un fichier "makefile" dans "projet_java/production" qui contient toutes les commandes nécessaires pour lancer notre application
+
+
+Que contient notre "makefile"!:
+	1-make begin : création des repertoires pour déposer les bin;
+
+	2-make compile : compiler les classes de notre projet;
+
+	3-make compile-tests : compiler les testes unitaires;
+
+	4-make start: lancement de l'application;
+
+	5-make start-tests : lancement des testes unitaires;
+
+	6- make clean : nettoyer notre projet(effacer les .class);
+
+	7-make delete : supprimer le répertoire des binaires;
+
+	8-make pipeline: permet de lancer toutes les commandes précédentes à la fois (création des répertoires, compilation des classes et des tests, lancement des tests et de l'application...);
+
+
+lancement de l'application:
+
+	1- se mettre dans "projet_java/production";
+	2- ouvrir le terminal dans ce repertoire;
+	3- lancer la commande "make pipeline";
+	4- avant de quitter le terminal lancer la commande "make clean", puis "make delete" pour supprimer les .class qu'on a généré après la compilation et laisser notre projet propre.

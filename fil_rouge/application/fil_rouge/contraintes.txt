@@ -1,0 +1,6 @@
+PRECEDENCE_GAP 10 BDD POO
+PRECEDENCE Réseau Système 
+MEET Math Anglais
+MEET POO Réseau
+MEET Système Math
+MAX_SPAN 491 POO BDD Système Anglais Réseau Math
